@@ -1,5 +1,6 @@
 @import 'config/_variables';
 @import 'config/reset';
+@import 'config/utils';
 @import 'main';
 @import 'partials/header';
 @import 'partials/footer';
@@ -8,3 +9,4 @@
 @import 'partials/videoBlock';
 @import 'pages/home';
 @import 'pages/videoDetail';
+@import 'pages/userProfile';
