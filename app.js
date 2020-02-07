@@ -13,9 +13,7 @@ import videoRouter from './routers/videoRouter';
 import globalRouter from './routers/globalRouter';
 import routes from './routes';
 import './passport';
-// import dotenv from "dotenv";
 
-// dotenv.config();
 
 const app = express();
 

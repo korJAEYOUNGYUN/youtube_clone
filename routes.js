@@ -37,7 +37,8 @@ const routes = {
     userDetail: (id) => {
         if(id) {
             return `${USERS}/${id}`
-        } else {
+        }
+        else {
             return USER_DETAIL;
         }
     },
@@ -49,21 +50,24 @@ const routes = {
     videoDetail: (id) => {
         if(id) {
             return `${VIDEOS}/${id}`;
-        } else {
+        }
+        else {
             return VIDEO_DETAIL;
         }
     },
     editVideo: (id) => {
         if(id) {
             return `${VIDEOS}/${id}/edit`
-        } else {
+        }
+        else {
             return EDIT_VIDEO;
         }
     },
     deleteVideo: (id) => {
         if(id) {
             return `${VIDEOS}/${id}/delete`;
-        } else {
+        }
+        else {
             return DELETE_VIDEO;
         }
     },

@@ -14,7 +14,8 @@ export const postJoin = async (req, res, next) => {
     if(password !== password2) {
         res.status(400);
         res.render('join', {pageTitle: 'Join'});
-    } else {
+    }
+    else {
         try {
             const user = await User({
                 name,
@@ -48,7 +49,8 @@ export const githubLoginCallback = async (_, __, profile, cb) => {
             user.githubId = id;
             user.save();
             return cb(null, user);
-        } else {
+        }
+        else {
             const newUser = await User.create({
                 email,
                 name,
@@ -76,7 +78,8 @@ export const facebookLoginCallback = async (_, __, profile, cb) => {
             user.facebookId = id;
             user.save();
             return cb(null, user);
-        } else {
+        }
+        else {
             const newUser = await User.create({
                 email,
                 name,
@@ -152,7 +155,8 @@ export const postChangePassword = async (req, res) => {
         if(newPassword !== newPassword2) {
             res.status(400);
             res.redirect(routes.users + routes.changePassword);
-        } else {
+        }
+        else {
             await req.user.changePassword(oldPassword, newPassword);
             res.redirect(routes.users + routes.me);
         }
