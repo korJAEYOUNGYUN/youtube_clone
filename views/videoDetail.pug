@@ -3,17 +3,26 @@ extends layouts/main
 block content
     .video-detail__container
         .video__player
-            video(src=`/${video.fileUrl}`)
+            video(src=`/${video.fileUrl}`, controls=true)
         .video__info
-            a(href=routes.editVideo(video.id))
-                button Edit video
+            if loggedUser && video.creator.id === loggedUser.id
+                a(href=routes.editVideo(video.id))
+                    button Edit video
+
             h5.video__title=video.title
-            span.video__views=video.views
+
             p.video__description=video.description
+
+            .video__author
+                p
+                    | Uploaded by&nbsp;
+                    a(href=routes.userDetail(video.creator.id))=video.creator.name
+
             if video.views === 1
                 span.video__views 1 view
             else
                 span.video__views #{video.views} views
+
         .video__comments
             if video.comments.length === 1
                 span.video__comment-number 1 comment
