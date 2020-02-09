@@ -5,7 +5,7 @@ It has user authentication, view video lists, uploading videos and adding commen
 
 <img src="/screenshots/home.png" style="zoom: 50%;" />
 
-<img src="\screenshots\videodetail.png" style="zoom: 50%;" />
+<img src="/screenshots/videodetail.png" style="zoom: 50%;" />
 
 ## Requirements
 - MongoDB
